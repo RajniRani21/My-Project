@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+  	 body {
+    background-size: cover;
+  background-image: url(img.jpg);
+}
+.form-container{
+  border:1px solid #fff;
+padding:50px 60px;
+opacity: 1;
+}
+.sub{
+  background-color: green;
+}
+
+
+
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12"> </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+
+<div class="container">
+  <h2>Sign Up</h2>
+  <form action="home.html" class="needs-validation" novalidate>
+    <div class="form-group">
+      <label for="fname"><b>First Name:</b></label>
+      <input type="text" class="form-control" id="fname" placeholder="Enter username" name="uname" required>
+      
+      <div class="valid-feedback"><b>Valid.</b></div>
+      <div class="invalid-feedback"><b>Please fill out this field.</b></div>
+    </div>
+    
+    <label for="lname"><b>Last Name:</b></label>
+      <input type="text" class="form-control" id="Lname" placeholder="Enter username" name="uname" required>
+      
+      <div class="valid-feedback"><b>Valid.</b></div>
+      <div class="invalid-feedback"><b>Please fill out this field.</b>
+      </div>
+      <br>
+ <div class="form-check-inline">
+      <label class="form-check-label" for="radio1"><b>Gender</b>
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked><b>Male</b>
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2"><b>Female</b>
+      </label>
+    </div>
+    <br>
+    <br>
+      
+      <label for="pnumber"><b>Phone Number:</b></label>
+      <input type="text" class="form-control" id="pnumber" name="pnumber" required>
+      
+      <div class="valid-feedback"><b>Valid.</b></div>
+      <div class="invalid-feedback"><b>Please fill out this field.</b>
+      </div>
+      
+      <label for="Address"><b>Address:</b></label>
+      <input type="text" class="form-control" id="Address" name="Address" required>
+      
+      <div class="valid-feedback"><b>Valid.</b></div>
+      <div class="invalid-feedback"><b>Please fill out this field.</b>
+      </div>
+    
+    <div class="form-group">
+      <label for="pwd"><b>Password:</b></label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+    
+    <div class="form-group">
+      <label for="cpwd"><b>Conform Password:</b></label>
+      <input type="password" class="form-control" id="cpwd" placeholder="Enter password" name="cpswd" required>
+      <div class="valid-feedback"><b>Valid.</b></div>
+      <div class="invalid-feedback"><b>Please fill out this field.</b></div>
+    </div>
+    
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> <b>I agree on Term and Conditions.</b>
+        <div class="valid-feedback"><b>Valid.</b></div>
+        <div class="invalid-feedback"><b>Check this checkbox to continue.</b></div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+<div  class="col-md-4 col-sm-4 col-xs-12"></div>
+</div>
+</div>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+    
+
+
+</body>
+</html>
